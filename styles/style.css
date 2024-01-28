@@ -11,13 +11,13 @@ html {
 .page {
   display: flex;
   place-content: center;
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -41,23 +41,23 @@ ol {
 
 .visually-hidden {
   position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   inline-size: 1px;
   block-size: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .button {
+  border: 1px solid #fff;
+  color: #fff;
   font-family: Oswald, sans-serif;
   font-size: 18px;
-  block-size: 34px;
-  border: 1px solid #fff;
   background-color: transparent;
-  color: #fff;
   cursor: pointer;
+  block-size: 34px;
 }
 
 .button:hover {
@@ -68,7 +68,7 @@ ol {
   background-color: #545050;
 }
 
-button:focus {
+.button:focus {
   outline: none;
 }
 
@@ -80,11 +80,11 @@ button:focus {
  /* ПОЗИЦИОНИРУЕМ КОНТЕНТ */
 
 .content {
-  inline-size: 1140px;
-  margin: auto;
   display: flex;
-  gap: 30px;
   align-items: flex-end;
+  gap: 30px;
+  margin: auto;
+  inline-size: 1140px;
 }
 
 /* СТИЛИ СЕКЦИИ .result */
@@ -99,7 +99,10 @@ button:focus {
 }
 
 .result__video {
+  object-fit: cover;
+  object-position: center;
   inline-size: 100%;
+  block-size: 386px;
 }
 
 /* стили .search-form */
@@ -122,9 +125,9 @@ button:focus {
 .search-form__label {
   display: flex;
   align-items: center;
-  inline-size: fit-content;
   margin-block-start: 5px;
   cursor: pointer;
+  inline-size: fit-content;
 }
 
 .search-form__label:focus {
@@ -137,28 +140,23 @@ button:focus {
 }
 
 .search-form__textfield {
+  border: none;
+  border-block-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  background-color: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  background-color: transparent;
   inline-size: 225px;
-  border: none;
-  outline: none;
-  color: white;
-  border-block-start: 1px solid white;
-  border-block-end: 1px solid white;
 }
 
 .search-form__textfield:focus {
   outline: none;
-}
-
-.search-form__textfield:active {
-  border: none;
-  border: 1px solid #fff;
 }
 
 .search-form__checkbox-list {
@@ -167,19 +165,19 @@ button:focus {
 }
 
 .search-form__pseudo-checkbox {
+  margin-inline-end: 5px;
+  border: 1px solid #fff;
+  padding: 1px;
   block-size: 19px;
   inline-size: 19px;
-  border: 1px solid #fff;
-  margin-inline-end: 5px;
-  padding: 1px;
 }
 
 .search-form__checkbox:checked ~.search-form__pseudo-checkbox::before {
   content: "";
   display: block;
+  background-color: #fff;
   inline-size: 100%;
   block-size: 100%;
-  background-color: #fff;
 }
 
 .search-form__checkbox:hover ~.search-form__label-text {
@@ -187,8 +185,8 @@ button:focus {
 }
 
 .search-form__submit-button {
-  inline-size: 194px;
   align-self: flex-end;
+  inline-size: 194px;
 }
 
 /* СТИЛИ СЕКЦИИ .content__details */
@@ -199,23 +197,29 @@ button:focus {
 
 .content__list {
   position: relative;
-  height: 298px;
-  overflow: scroll;
+  padding-block-start: 2px;
+  overflow: auto;
+  block-size: 298px;
+}
+
+/* добавление padding на последний li для отображения outline при focus-visible */
+.content__list > li:last-child {
+  padding: 2px;
 }
 
 /* стили .title */
 .title {
+  margin-block-end: 23px;
   font-family: Oswald, sans-serif;
-  font-size: 75px;
   font-weight: 700;
+  font-size: 75px;
+  line-height: 70.5px;
   text-transform: uppercase;
-  line-height: 94%;
-  margin-block-end: 26px;
 }
 
 .content__accent {
   color: #545050;
-  line-height: 94%;
+  line-height: 70.5px;
 }
 
 /* стили .content__list-item */
@@ -227,11 +231,11 @@ button:focus {
 
 .content__card-link {
   display: block;
-  padding: 2px;
   margin: 0 2px;
-  text-decoration: none;
-  color: #fff;
+  padding: 2px;
   outline: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .content__card-link:hover {
@@ -251,13 +255,13 @@ button:focus {
 }
 
 .content__video-card-title {
+  margin-block-end: 6px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
-  text-transform: uppercase;
   text-decoration: none;
-  margin-block-end: 6px;
+  text-transform: uppercase;
 }
 
 .content__video-card-description {
@@ -275,6 +279,8 @@ button:focus {
 }
 
 .content__video-card-thumbnail {
+  object-fit: cover;
+  object-position: center;
   inline-size: 194px;
   block-size: 103px;
 }

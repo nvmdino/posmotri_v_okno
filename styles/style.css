@@ -1,3 +1,5 @@
+/* Pixel Perfect Screen Shot https://disk.yandex.com/i/8VbPDSGUaekzbA */
+
 *,
 *::before,
 *::after {
@@ -96,6 +98,7 @@ ol {
 .result__video-container {
   position: relative;
   margin-block-end: 16px;
+  block-size: 386px;
 }
 
 .result__video {
@@ -192,12 +195,12 @@ ol {
 /* СТИЛИ СЕКЦИИ .content__details */
 
 .content__details {
-  inline-size: 399px;
+  inline-size: 398px;
+  padding-top: 10px;
 }
 
 .content__list {
   position: relative;
-  padding-block-start: 2px;
   overflow: auto;
   block-size: 298px;
 }
@@ -209,17 +212,19 @@ ol {
 
 /* стили .title */
 .title {
-  margin-block-end: 23px;
+  vertical-align: baseline;
+  margin-block-end: 26px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
-  line-height: 70.5px;
+  font-style: normal;
+  line-height: 94%;
   text-transform: uppercase;
 }
 
 .content__accent {
   color: #545050;
-  line-height: 70.5px;
+  line-height: 94%;
 }
 
 /* стили .content__list-item */
@@ -281,8 +286,9 @@ ol {
 .content__video-card-thumbnail {
   object-fit: cover;
   object-position: center;
-  inline-size: 194px;
+  min-inline-size: 194px;
   block-size: 103px;
+  flex-shrink: 0;
 }
 
 .more-button {

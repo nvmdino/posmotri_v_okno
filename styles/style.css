@@ -195,13 +195,13 @@ ol {
 /* СТИЛИ СЕКЦИИ .content__details */
 
 .content__details {
-  inline-size: 398px;
   padding-top: 10px;
+  inline-size: 398px;
 }
 
 .content__list {
-  padding-block-start: 2px;
   position: relative;
+  padding-block-start: 2px;
   overflow: auto;
   block-size: 298px;
 }
@@ -213,8 +213,8 @@ ol {
 
 /* стили .title */
 .title {
-  vertical-align: baseline;
   margin-block-end: 26px;
+  vertical-align: baseline;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
@@ -285,11 +285,11 @@ ol {
 }
 
 .content__video-card-thumbnail {
+  flex-shrink: 0;
   object-fit: cover;
   object-position: center;
   min-inline-size: 194px;
   block-size: 103px;
-  flex-shrink: 0;
 }
 
 .more-button {

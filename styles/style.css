@@ -200,6 +200,7 @@ ol {
 }
 
 .content__list {
+  padding-block-start: 2px;
   position: relative;
   overflow: auto;
   block-size: 298px;

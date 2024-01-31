@@ -92,7 +92,7 @@ ol {
 /* СТИЛИ СЕКЦИИ .result */
 
 .result {
-  inline-size: 711px;
+  min-inline-size: 711px;
 }
 
 .result__video-container {
@@ -105,7 +105,7 @@ ol {
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
-  block-size: 386px;
+  max-block-size: 386px;
 }
 
 /* стили .search-form */
@@ -196,7 +196,7 @@ ol {
 
 .content__details {
   padding-top: 10px;
-  inline-size: 398px;
+  /* inline-size: 398px; */
 }
 
 .content__list {
@@ -204,6 +204,10 @@ ol {
   padding-block-start: 2px;
   overflow: auto;
   block-size: 298px;
+}
+
+.content__list-item {
+  max-inline-size: 398px;
 }
 
 /* добавление padding на последний li для отображения outline при focus-visible */
